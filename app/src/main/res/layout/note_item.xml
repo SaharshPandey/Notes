@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:id="@+id/note_item"
+    android:background="@drawable/white_curve_bg">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/note_item_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Notes from email"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/note_item_details"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:lineSpacingExtra="5dp"
+        android:text="Notes from email jdd fdbf wefbiweu dwiuebfweif dwebuibf The following components are ready to update: Android Emulator, Android SDK Platform-Tools
+The following components are ready to update: Android Emulator, Android SDK Platform-Tools"
+        android:layout_gravity="center"
+        />
+
+
+</RelativeLayout>

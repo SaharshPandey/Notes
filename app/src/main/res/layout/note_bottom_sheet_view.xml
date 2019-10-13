@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    android:background="@drawable/bottom_sheet_bg"
+    android:backgroundTint="@color/light_blue"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_notes_img"
+                android:src="@drawable/ic_edit"
+                android:padding="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delete_notes_img"
+                android:src="@drawable/ic_delete"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/note_heading"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:background="@drawable/editext_plain_bg"
+            android:layout_height="wrap_content"
+            android:hint="Add your title"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/note_details"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editext_plain_bg"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:hint="Add your description...."
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/save_note"
+            android:layout_gravity="end"
+            android:text="Save"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/tb_search_bg"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

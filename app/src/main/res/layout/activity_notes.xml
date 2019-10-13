@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".NotesActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_notes"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_add_black_24dp"
+        android:backgroundTint="@color/searc_bg"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/empty_state"
+        android:visibility="gone"
+        >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_margin="40dp"
+        android:src="@drawable/ic_empty_list"
+        android:scaleType="fitCenter"
+        android:id="@+id/es_image"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/es_text"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:text="Oops!!! You don't have Notes..."
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@id/es_image"
+        />
+
+    </RelativeLayout>
+</RelativeLayout>
